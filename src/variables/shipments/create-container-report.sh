@@ -15,4 +15,6 @@ mkdir -p -- "$directory"
 # Best paractice: Always use double quotes to prevent globbing and word splitting
 grep -- "$container" "$input_file" >"$directory/${container}_report.csv"
 
-echo "Wrote report $directory/${container}_report.csv"
+# u can use echo or printf here
+# echo "Wrote report $directory/${container}_report.csv"
+printf "Wrote report %s/%s_report.csv\n" "$directory" "$container"
